@@ -36,7 +36,7 @@ for($y=0; $y -lt $height; $y++) {
         $idx = [int]($b / 255 * ($chars.Length - 1))
         $line += $chars[$idx]
     }
-    # Запись построчно, чтобы не зависеть от памятиA
+    # Запись построчно, чтобы не зависеть от памяти
     Add-Content -Path $outPath -Value $line -Encoding UTF8
     Write-Progress -Activity "Конвертация" -PercentComplete (($y/$height)*100)
 }
